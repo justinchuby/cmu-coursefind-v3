@@ -44,3 +44,5 @@
 </figure>
 
 <p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+
+<a href="/courses/15-213">/courses/15-213</a>
