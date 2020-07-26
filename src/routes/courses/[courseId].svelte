@@ -60,7 +60,6 @@
 
 {#await $course then result}
 <!-- Take the first course -->
-  {@debug result}
   {#if result.data.courses.length}
     {#each result.data.courses.slice(0, 1) as course}
       <h1>{course.courseId}</h1>
