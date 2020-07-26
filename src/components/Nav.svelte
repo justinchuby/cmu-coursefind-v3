@@ -67,5 +67,10 @@
         about
       </a>
     </li>
+    <li>
+      <a aria-current={segment === 'disclaimer' ? 'page' : undefined} href="disclaimer">
+        disclaimer
+      </a>
+    </li>
   </ul>
 </nav>
