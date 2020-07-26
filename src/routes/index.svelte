@@ -7,12 +7,12 @@
 </style>
 
 <script>
-import { courseList } from './_course_list.js';
+  import { courseList } from "./_course_list.js";
 </script>
 
 <svelte:head>
   <title>CMU Course Find</title>
-  <link rel="shortcut icon" href="/static/favicons/favicon.ico">
+  <link rel="shortcut icon" href="/static/favicons/favicon.ico" />
 </svelte:head>
 
 <h1>CMU Course Find</h1>
