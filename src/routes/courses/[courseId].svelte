@@ -50,6 +50,7 @@
 </script>
 
 <script>
+  import linkifyHtml from "linkifyjs/html";
   export let course;
   export let courseId;
 </script>
@@ -80,10 +81,10 @@
       </p>
 
       <h3>Description</h3>
-      <p>{course.desc}</p>
+      <p>{@html linkifyHtml(course.desc, { defaultProtocol: 'https' })}</p>
 
       <h3>Notes</h3>
-      <p>{course.notes.replace(/\r?\n|\r|[ ]{2,}/g, '')}</p>
+      <p>{ course.notes.replace(/\r?\n|\r|[ ]{2,}/g, '').replace(/(\.|:)([a-zA-Z])/g, '$1 $2') }</p>
 
       <h3>Meetings</h3>
       {#if course.meetings}
