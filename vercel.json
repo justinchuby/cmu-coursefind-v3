@@ -6,5 +6,8 @@
       "status": 307,
       "headers": { "Location": "/courses/$1#$2" }
     }
-  ]
+  ],
+  "github": {
+    "silent": true
+  }
 }
