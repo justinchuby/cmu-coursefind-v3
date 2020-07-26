@@ -1,6 +1,6 @@
 {
   "routes": [
     { "src": "/courses/\\d{2}-\\d{3}", "dest": "/courses" },
-    { "src": "/courses/\\d{2}-\\d{3}/\\w+", "dest": "/courses" }
+    { "src": "/courses/(?<courseId>\\d{2}-\\d{3})/?<term>\\w+", "dest": "/courses/$courseId#$term" }
   ]
 }
