@@ -7,7 +7,6 @@
   import { client } from "../../data";
   export async function preload({ params }) {
     const { courseId } = params;
-    console.log(courseId);
     const GET_COURSE = gql`
     {
       courses(filter: {
