@@ -19,3 +19,7 @@ rules:
     - 1
     - code: 120
       tabWidth: 2
+  semi:
+    - error
+    - never
+
