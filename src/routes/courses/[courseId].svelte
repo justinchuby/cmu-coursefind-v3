@@ -62,7 +62,7 @@
 {#await $course then result}
 <!-- Take the first course -->
   {#if result.data.courses.length}
-    {#each result.data.courses.slice(0, 1) as course}
+    {#each result.data.courses.slice(-1) as course}
       <h1>{course.courseId}</h1>
       <h2>{course.name}</h2>
       <h3>
