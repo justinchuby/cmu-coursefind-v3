@@ -56,7 +56,14 @@
 </script>
 
 <svelte:head>
-  <title>CMU Course Find</title>
+  {#await $course then result}
+    {#if result.data.courses.length}
+      {#each result.data.courses.slice(-1) as course}
+      <!-- TODO: Hacky way of getting the name. Use a better way. -->
+        <title>{courseId} {course.name} - CMU Course Find</title>
+      {/each}
+    {/if}
+  {/await}
 </svelte:head>
 
 {#await $course then result}
@@ -85,9 +92,7 @@
         <p>
           {@html linkifyHtml(course.desc, { defaultProtocol: 'https' })}
         </p>
-      {:else}
-        None.
-      {/if}
+      {:else}None.{/if}
 
       <h3>Notes</h3>
       {#if course.notes}
@@ -96,9 +101,7 @@
             .replace(/\r?\n|\r|[ ]{2,}/g, '')
             .replace(/(\.|:)([a-zA-Z])/g, '$1 $2')}
         </p>
-      {:else}
-        None.
-      {/if}
+      {:else}None.{/if}
 
       <h3>Meetings</h3>
       {#if course.meetings}
