@@ -2,9 +2,20 @@ env:
   browser: true
   es2020: true
   node: true
+plugins:
+  - svelte3
 extends:
-  - airbnb-base
+  - eslint:recommended
+overrides:
+  - files:
+    - "**/*.svelte"
+    processor: svelte3/svelte3
+
 parserOptions:
   ecmaVersion: 11
   sourceType: module
-rules: {}
+rules:
+  max-len:
+    - 1
+    - code: 120
+      tabWidth: 2
