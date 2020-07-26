@@ -1,3 +1,7 @@
+<script>
+  import { courseList } from "./_course_list.js"
+</script>
+
 <style>
   h1 {
     font-size: 2.8em;
@@ -5,10 +9,6 @@
     margin: 0 0 0.5em 0;
   }
 </style>
-
-<script>
-  import { courseList } from "./_course_list.js";
-</script>
 
 <svelte:head>
   <title>CMU Course Find</title>

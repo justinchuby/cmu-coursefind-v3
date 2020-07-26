@@ -49,4 +49,13 @@
     Youtube
   </a>
 </p>
-<p>Site is developed with <a href="https://svelte.dev/"target="_blank" rel="nofollow noopener noreferrer">Svelte</a> and Sapper.</p>
+<p>
+  Site is developed with
+  <a
+    href="https://svelte.dev/"
+    target="_blank"
+    rel="nofollow noopener noreferrer">
+    Svelte
+  </a>
+  and Sapper.
+</p>

@@ -2,11 +2,11 @@
   // the (optional) preload function takes a
   // `{ path, params, query }` object and turns it into
   // the data we need to render the page
-  import { gql } from "apollo-boost";
-  import { query } from "svelte-apollo";
-  import { client } from "../../data";
+  import { gql } from "apollo-boost"
+  import { query } from "svelte-apollo"
+  import { client } from "../../data"
   export async function preload({ params }) {
-    const { courseId } = params;
+    const { courseId } = params
     const GET_COURSE = gql`
     {
       courses(filter: {
@@ -43,16 +43,16 @@
         year
       }
     }
-    `;
-    const course = query(client, { query: GET_COURSE });
-    return { course, courseId };
+    `
+    const course = query(client, { query: GET_COURSE })
+    return { course, courseId }
   }
 </script>
 
 <script>
-  import linkifyHtml from "linkifyjs/html";
-  export let course;
-  export let courseId;
+  import linkifyHtml from "linkifyjs/html"
+  export let course
+  export let courseId
 </script>
 
 <svelte:head>
