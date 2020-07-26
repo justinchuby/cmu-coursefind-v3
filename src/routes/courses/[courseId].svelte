@@ -60,7 +60,7 @@
 </svelte:head>
 
 {#await $course then result}
-<!-- Take the first course -->
+  <!-- Take the last course -->
   {#if result.data.courses.length}
     {#each result.data.courses.slice(-1) as course}
       <h1>{course.courseId}</h1>
@@ -81,10 +81,24 @@
       </p>
 
       <h3>Description</h3>
-      <p>{@html linkifyHtml(course.desc, { defaultProtocol: 'https' })}</p>
+      {#if course.desc}
+        <p>
+          {@html linkifyHtml(course.desc, { defaultProtocol: 'https' })}
+        </p>
+      {:else}
+        None.
+      {/if}
 
       <h3>Notes</h3>
-      <p>{ course.notes.replace(/\r?\n|\r|[ ]{2,}/g, '').replace(/(\.|:)([a-zA-Z])/g, '$1 $2') }</p>
+      {#if course.notes}
+        <p>
+          {course.notes
+            .replace(/\r?\n|\r|[ ]{2,}/g, '')
+            .replace(/(\.|:)([a-zA-Z])/g, '$1 $2')}
+        </p>
+      {:else}
+        None.
+      {/if}
 
       <h3>Meetings</h3>
       {#if course.meetings}
@@ -99,7 +113,7 @@
     {/each}
   {:else}
     <h1>{courseId}</h1>
-    <p>Not found in database. Will add soon. </p>
+    <p>Not found in database. Will add soon.</p>
   {/if}
 
 {:catch error}
