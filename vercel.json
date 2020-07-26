@@ -1,12 +1,10 @@
 {
   "routes": [
-    { "src": "/courses/\\d{2}-\\d{3}", "dest": "/courses" }
-  ],
-  "redirects": [
+    { "src": "/courses/\\d{2}-\\d{3}", "dest": "/courses" },
     {
-      "source": "/courses/(\\d{2}-\\d{3})/(\\w+)",
-      "destination": "/courses/$1#$2",
-      "statusCode": 307
+      "src": "/courses/(\\d{2}-\\d{3})/(\\w+)",
+      "status": 307,
+      "headers": { "Location": "/courses/$1#$2" }
     }
   ]
 }
