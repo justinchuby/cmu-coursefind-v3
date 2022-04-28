@@ -15,7 +15,7 @@
     "apollo-boost": "^0.4.9",
     "apollo-client": "^2.6.10",
     "compression": "^1.7.1",
-    "cross-fetch": "^3.0.5",
+    "cross-fetch": "^3.1.5",
     "graphql": "^14.0.0",
     "linkifyjs": "^2.1.9",
     "polka": "next",
