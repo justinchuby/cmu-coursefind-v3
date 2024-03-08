@@ -17,6 +17,4 @@
 
 <h1>CMU Course Find</h1>
 
-<h3>This is a new version using the <a href="https://github.com/justinchuby/cmu-courseapi-graphql">GraphQL API</a>. It's under construction since I removed the elasticsearch database. For now, use "Search" in browser to search.</h3>
-
-<p>{@html courseList}</p>
+<h3>This site is now obsolete. Please visit <a>https://cmucourses.com/</a></h3>
