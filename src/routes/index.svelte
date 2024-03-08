@@ -17,4 +17,4 @@
 
 <h1>CMU Course Find</h1>
 
-<h3>This site is now obsolete. Please visit <a>https://cmucourses.com/</a></h3>
+<h3>This site is now obsolete. Please visit <a href="https://cmucourses.com/">cmucourses.com</a></h3>
